@@ -1,6 +1,8 @@
 import 'package:Lists/use_lists.dart';
 import 'package:flutter/material.dart';
 
+import 'different_types_items.dart';
+import 'floating_app_bar_list.dart';
 import 'grid_list.dart';
 import 'horizontal_list.dart';
 import 'long_lists.dart';
@@ -41,13 +43,21 @@ class HomeRoute extends StatelessWidget {
                 );
               },
             ),
-            /*RaisedButton(
+            RaisedButton(
               child: Text('Create lists with different types of items'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => (ListsDifferentTypesItems())),
+                    builder: (context) => (ListsDifferentTypesItems(
+                      items: List<ListItem>.generate(
+                        1000,
+                        (i) => i % 6 == 0
+                            ? HeadingItem("Heading $i")
+                            : MessageItem("Sender $i", "Message body $i"),
+                      ),
+                    )),
+                  ),
                 );
               },
             ),
@@ -59,7 +69,7 @@ class HomeRoute extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => (FloatingBarList())),
                 );
               },
-            ),*/
+            ),
             RaisedButton(
               child: Text('Use Lists'),
               onPressed: () {
