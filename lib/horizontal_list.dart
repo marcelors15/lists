@@ -37,8 +37,20 @@ class HorizontalList extends StatelessWidget {
                 color: Colors.yellow,
               ),
               Container(
-                width: 160.0,
+                width: 170.0,
                 color: Colors.orange,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.redAccent,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.lightGreen,
+              ),
+              Container(
+                width: 140.0,
+                color: Colors.blueGrey,
               ),
             ],
           ),

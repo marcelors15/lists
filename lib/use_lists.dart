@@ -24,10 +24,12 @@ class UseLists extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.photo_album),
               title: Text('Album'),
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.phone),
               title: Text('Phone'),
+              onTap: () {},
             ),
           ],
         ),
